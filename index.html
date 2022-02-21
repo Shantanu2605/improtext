@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>ImproText!</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://127.0.0.1:8000/">ImproText</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="/">Home</a>
+        <a class="nav-link" href="http://127.0.0.1:8000/about">About Us</a>
+        <a class="nav-link" href="http://127.0.0.1:8000/contactus">Contact us</a>
+      </div>
+    </div>
+  </div>
+
+        <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+
+
+</nav>
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+  <strong>Welcome to ImproText!</strong> You can do anything with your text here!
+
+</div> <div class="container">
+<img src="https://source.unsplash.com/1300x250/?nature,water">
+       <form action= '/analyze' method= 'post'>  {% csrf_token %}
+    <h1>Welcome to ImproText!</h1>
+           <p1> ► Improtext is absolutely free to use.</p1><br>
+           <p2> ► Through this website, you can capitalize your text, remove punctuations as well as remove extra spaces and extra lines.</p2><br>
+           <p3> ► To know more about us, click on 'About Us'.</p3><br><br>
+
+    <label for="exampleFormControlTextarea1">➡ Enter text and get it in the way you want!</label>
+    <textarea placeholder="Enter text" class="form-control" name='text' id="exampleFormControlTextarea1" rows="10"></textarea>
+  <div class="custom-control custom-switch">
+  <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch">Remove Punctuations</label>
+</div>
+    <input type="checkbox" name="fullcaps"> UPPERCASE<br>
+    <input type="checkbox" name="newlineremover"> Remove new line<br>
+    <input type="checkbox" name="spaceremover"> Remove Extra Spaces<br>
+<button type="submit" class="btn btn-dark mt-2">ANALYZE TEXT</button>
+            </form>
+
+  </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
